@@ -1,3 +1,4 @@
+replace github.com/danielthanh107/lqt-serializer => ./lqt-serializer
 module lqt-serializer
 
 go 1.20
