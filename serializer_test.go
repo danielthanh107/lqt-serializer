@@ -1,11 +1,9 @@
-package lqtserializer_test
+package lqtserializer
 
 import (
 	"fmt"
 	"reflect"
 	"testing"
-
-	lqtserializer "lqt-serializer"
 
 	"github.com/google/uuid"
 )
@@ -71,7 +69,7 @@ func TestSerialier(t *testing.T) {
 		},
 	}
 
-	s := lqtserializer.New(&[]ArticleSerializer{}, articles)
+	s := New(&[]ArticleSerializer{}, articles)
 	data := s.GetData()
 
 	fmt.Println("---data", data)
@@ -91,7 +89,7 @@ func TestSerialier(t *testing.T) {
 	var expected2 []map[string]any
 
 	for _, ele := range expected {
-		value := lqtserializer.SliceMaps(ele, []string{"title", "content", "slug"})
+		value := SliceMaps(ele, []string{"title", "content", "slug"})
 
 		expected2 = append(expected2, value)
 	}
