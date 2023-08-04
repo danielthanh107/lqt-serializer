@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"lqtserializer"
+	lqtserializer "lqt-serializer"
 
 	"github.com/google/uuid"
 )
